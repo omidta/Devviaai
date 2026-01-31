@@ -452,6 +452,6 @@ az webapp ssh --name my-app --resource-group my-rg
 ---
 
 **Template Version**: 1.0  
-**Last Updated**: 2024-01-31
+**Last Updated**: 2025-01-31
 
 [Back to Stage 4 Overview](README.md)
