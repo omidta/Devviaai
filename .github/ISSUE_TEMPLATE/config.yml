@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions - Open Ideas & Brainstorming
+    url: https://github.com/omidta/Devviaai/discussions/categories/open-ideas
+    about: Share and discuss new ideas with the community
+  - name: 🔬 Discussions - Feedback Requests
+    url: https://github.com/omidta/Devviaai/discussions/categories/feedback-requests
+    about: Request feedback on your prototype or concept
+  - name: 🧪 Discussions - Prototype Discussions
+    url: https://github.com/omidta/Devviaai/discussions/categories/prototype-discussions
+    about: Discuss prototype implementations and experiments

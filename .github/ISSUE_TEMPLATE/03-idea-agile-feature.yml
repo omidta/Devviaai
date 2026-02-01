@@ -1,0 +1,264 @@
+name: ✨ Feature Request - Agile Framework
+description: Submit a feature request using Agile user story format
+title: "[FEATURE] "
+labels: ["idea", "new", "enhancement", "agile"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Agile Feature Request
+        
+        Use this template to submit feature requests following Agile best practices.
+        Focus on user value, acceptance criteria, and clear deliverables.
+        
+        **Format**: User Story → Acceptance Criteria → Definition of Done
+        
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title
+      description: A concise, descriptive title for the feature
+      placeholder: "e.g., GitHub Actions Integration for Stage 3 Deployment"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Epic/Theme
+      description: Which epic or theme does this feature belong to?
+      options:
+        - Stage 1 - Discover & Design
+        - Stage 2 - Develop & Build
+        - Stage 3 - Deploy & Deliver
+        - Stage 4 - Validate & Operate
+        - Documentation
+        - Developer Experience
+        - CI/CD & Automation
+        - Templates & Tools
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: 📖 User Story
+      description: Describe the feature as a user story
+      placeholder: |
+        As a [role],
+        I want to [action],
+        So that [benefit/value].
+        
+        Example:
+        As a Platform Engineer,
+        I want to automatically deploy my Stage 2 artifacts using GitHub Actions,
+        So that I can reduce manual deployment steps and errors.
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 🎯 Background & Context
+      description: Provide context for why this feature is needed
+      placeholder: |
+        Current Situation:
+        - Platform engineers manually deploy artifacts from Stage 2
+        - Deployment process takes 2-3 hours per environment
+        - High error rate due to manual steps
+        
+        Business Value:
+        - Faster time to production
+        - Reduced human error
+        - Improved developer experience
+        
+        User Impact:
+        - Affects 20+ platform engineers
+        - Impacts all Stage 3 workflows
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: Define the acceptance criteria (Given/When/Then format recommended)
+      placeholder: |
+        1. Given a completed Stage 2 artifact repository,
+           When I push code to the main branch,
+           Then a GitHub Actions workflow automatically triggers deployment
+        
+        2. Given a deployment in progress,
+           When I check the Actions tab,
+           Then I can see real-time deployment status and logs
+        
+        3. Given a failed deployment,
+           When the deployment fails,
+           Then I receive a notification with error details
+        
+        4. Given a successful deployment,
+           When deployment completes,
+           Then the deployed resources are validated automatically
+        
+        5. Given multiple environments (dev, staging, prod),
+           When I trigger deployment,
+           Then I can select target environment via workflow dispatch
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: 🔧 Technical Implementation Notes
+      description: Technical details, architecture, or implementation guidance
+      placeholder: |
+        Implementation Approach:
+        - Create `.github/workflows/deploy-stage3.yml`
+        - Use Terraform GitHub Actions
+        - Integrate with Azure service principal
+        - Support environment-specific variable files
+        
+        Technical Considerations:
+        - State management for Terraform
+        - Secret management for credentials
+        - Approval gates for production
+        - Rollback mechanism
+        
+        Dependencies:
+        - Requires Azure credentials configured
+        - Depends on Terraform modules from Stage 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: definition_done
+    attributes:
+      label: ✔️ Definition of Done
+      description: What must be complete for this feature to be "done"?
+      placeholder: |
+        - [ ] Code implemented and reviewed
+        - [ ] Unit tests written and passing
+        - [ ] Integration tests passing
+        - [ ] Documentation updated (README, guides)
+        - [ ] Template created (if applicable)
+        - [ ] Example added to sample project
+        - [ ] Tested in dev/staging environments
+        - [ ] Security review completed
+        - [ ] Performance benchmarks met
+        - [ ] User acceptance testing passed
+        - [ ] Release notes updated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (MoSCoW)
+      description: Prioritize using MoSCoW method
+      options:
+        - Must Have - Critical for release
+        - Should Have - Important but not critical
+        - Could Have - Desirable if time permits
+        - Won't Have - Deferred to future release
+    validations:
+      required: true
+
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points (Effort Estimate)
+      description: Estimate using Fibonacci sequence
+      options:
+        - "1 - Trivial"
+        - "2 - Small"
+        - "3 - Medium"
+        - "5 - Large"
+        - "8 - Very Large"
+        - "13 - Extra Large (consider splitting)"
+        - "21 - Epic (must split)"
+        - "? - Needs refinement"
+    validations:
+      required: false
+
+  - type: input
+    id: target_sprint
+    attributes:
+      label: Target Sprint/Milestone
+      description: Which sprint or milestone should this target?
+      placeholder: "e.g., Sprint 5, Q1 2026, v1.2.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 🔗 Dependencies & Blockers
+      description: What dependencies or blockers exist?
+      placeholder: |
+        Depends On:
+        - Issue #123: Azure credential setup
+        - Completion of Stage 2 Terraform modules
+        
+        Blocks:
+        - Issue #456: End-to-end deployment testing
+        
+        Related:
+        - PR #789: Similar implementation for Stage 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: testing_strategy
+    attributes:
+      label: 🧪 Testing Strategy
+      description: How should this feature be tested?
+      placeholder: |
+        Test Scenarios:
+        1. Happy path: Successful deployment to dev
+        2. Error handling: Invalid credentials
+        3. Edge case: Concurrent deployments
+        4. Performance: Deploy time < 10 minutes
+        
+        Test Data:
+        - Sample Stage 2 repository with typical resources
+        - Multiple environment configurations
+        
+        Testing Tools:
+        - GitHub Actions test workflow
+        - Terraform validate/plan
+        - Azure CLI verification
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Screenshots, mockups, links, or other context
+      placeholder: |
+        - Wireframes or mockups
+        - Example workflows from other projects
+        - User feedback or quotes
+        - Research or competitive analysis
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: This feature aligns with the Devviaai framework principles
+          required: true
+        - label: The user story clearly defines the user value
+          required: true
+        - label: Acceptance criteria are specific and testable
+          required: true
+        - label: I am willing to contribute to implementation (if applicable)
+          required: false

@@ -34,6 +34,49 @@ This directory contains reusable templates for common documentation artifacts us
 
 ---
 
+### Innovation Workflow Templates
+
+#### [Idea Evaluation Template](idea-evaluation-template.md)
+**Purpose**: Systematically evaluate submitted ideas  
+**When to Use**: When reviewing ideas in the Innovation Workflow  
+**Stage**: Idea review phase
+
+**Key Sections**:
+- Evaluation criteria (alignment, value, feasibility, resources, strategic fit)
+- Scoring matrix
+- Decision recommendation
+- Next steps planning
+
+---
+
+#### [Prototype Planning Template](prototype-planning-template.md)
+**Purpose**: Plan and document prototype/MVP development  
+**When to Use**: For approved ideas moving to prototyping  
+**Stage**: Between approval and implementation
+
+**Key Sections**:
+- Hypothesis and success criteria (Lean Startup)
+- Design Thinking stages
+- User stories (Agile)
+- Technical implementation plan
+- Testing and validation plan
+
+---
+
+#### [Impact Measurement Template](impact-measurement-template.md)
+**Purpose**: Measure actual impact of implemented ideas  
+**When to Use**: Post-implementation to validate results  
+**Stage**: After feature release
+
+**Key Sections**:
+- Quantitative metrics vs. targets
+- User satisfaction and adoption
+- Business impact (ROI, time savings)
+- Lessons learned
+- Recommendations
+
+---
+
 ### Stage-Specific Templates
 
 #### Stage 1 Templates
@@ -132,12 +175,14 @@ Templates are starting points. Adapt them:
 
 ## 📋 Template Usage by Stage
 
-### Before Stage 1: Project Initiation
+### Before Stage 1: Project Initiation & Innovation
 
 **Use**:
 - [Project Kickoff Checklist](project-kickoff-checklist.md)
+- [Idea Evaluation Template](idea-evaluation-template.md) (for Innovation Workflow)
+- [Prototype Planning Template](prototype-planning-template.md) (for Innovation Workflow)
 
-**Purpose**: Ensure readiness to start the framework workflow
+**Purpose**: Ensure readiness to start the framework workflow and manage ideas effectively
 
 ---
 
@@ -177,8 +222,9 @@ Templates are starting points. Adapt them:
 **Use**:
 - [Monitoring Template](../04-stage-validate-operate/TEMPLATE-MONITORING.md)
 - [Runbook Template](../04-stage-validate-operate/TEMPLATE-RUNBOOK.md)
+- [Impact Measurement Template](impact-measurement-template.md) (for Innovation Workflow)
 
-**Purpose**: Establish operational procedures
+**Purpose**: Establish operational procedures and measure impact of innovations
 
 ---
 

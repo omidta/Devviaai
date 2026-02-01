@@ -100,6 +100,7 @@ For a complete walkthrough, see [Quick Start Guide](docs/guides/QUICK-START.md).
 - **[Quick Start Guide](docs/guides/QUICK-START.md)** - Get started in 15 minutes
 - **[Step-by-Step Guide](docs/guides/STEP-BY-STEP.md)** - Detailed implementation guide
 - **[Customization Guide](docs/guides/CUSTOMIZATION.md)** - Adapt the framework to your needs
+- **[Innovation Workflow](docs/guides/INNOVATION-WORKFLOW.md)** - Manage ideas using Design Thinking, Lean Startup, or Agile
 
 ### Stage Documentation
 
