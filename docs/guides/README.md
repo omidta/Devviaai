@@ -52,6 +52,53 @@ Welcome to the Devviaai Framework guides! These guides will help you understand 
 
 ---
 
+### Innovation & Idea Management
+
+#### [Innovation Workflow Guide](INNOVATION-WORKFLOW.md)
+**Time**: 45 minutes  
+**Audience**: Anyone wanting to submit or manage ideas  
+**Content**: Complete guide to the innovation workflow
+
+- Framework comparison (Design Thinking, Lean Startup, Agile)
+- Idea submission and evaluation process
+- Project board configuration
+- Integration with 4-stage workflow
+- Best practices and metrics
+
+**Start here if**: You want to submit an idea, understand the evaluation process, or set up idea management for your team.
+
+---
+
+#### [Innovation Workflow - Quick Reference](INNOVATION-WORKFLOW-QUICK-REF.md)
+**Time**: 5 minutes  
+**Audience**: Quick reference for idea submitters  
+**Content**: At-a-glance guide for the innovation workflow
+
+- Framework comparison table
+- Idea lifecycle diagram
+- Labels and their meaning
+- Common workflows
+- Quick links
+
+**Start here if**: You need a quick reminder or want to submit an idea right away.
+
+---
+
+#### [Project Board Setup Guide](PROJECT-BOARD-SETUP.md)
+**Time**: 30 minutes  
+**Audience**: Team leads and project managers  
+**Content**: Detailed setup instructions for GitHub Projects
+
+- Column configuration
+- Automation setup
+- Custom fields
+- Views and filters
+- Maintenance guidelines
+
+**Start here if**: You're setting up the innovation workflow project board for your team.
+
+---
+
 ## 🎯 Which Guide Should I Use?
 
 ### For Your First Time
@@ -73,7 +120,14 @@ Start Here → [Quick Start Guide] → Try it out → [Step-by-Step Guide] → C
 1. Read [Quick Start Guide](QUICK-START.md) to understand basics
 2. Review [Step-by-Step Guide](STEP-BY-STEP.md) for complete process
 3. Customize using [Customization Guide](CUSTOMIZATION.md)
-4. Share appropriate guides with team members
+4. Set up innovation workflow with [Innovation Workflow Guide](INNOVATION-WORKFLOW.md)
+5. Share appropriate guides with team members
+
+### For Idea Submitters
+
+1. Quick reference: [Innovation Workflow - Quick Reference](INNOVATION-WORKFLOW-QUICK-REF.md)
+2. Full process: [Innovation Workflow Guide](INNOVATION-WORKFLOW.md)
+3. Submit idea via [GitHub Issues](https://github.com/omidta/Devviaai/issues/new/choose)
 
 ## 📋 Guide Conventions
 
