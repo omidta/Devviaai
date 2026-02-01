@@ -47,30 +47,22 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const comment = `## 🎉 Thank you for submitting your idea!
-
-This idea has been added to the **Idea Pool** and will be reviewed by the team.
-
-### 📋 Next Steps
-
-1. **Community Discussion** (Optional): Feel free to share this in [Discussions](https://github.com/${context.repo.owner}/${context.repo.repo}/discussions) for community feedback
-2. **Team Review**: The team will review this idea and update the label to \`under review\` when evaluation begins
-3. **Validation**: If validated, the idea will move to \`approved\` status and may be added to a milestone
-4. **Implementation**: Approved ideas will be prioritized and may be assigned for implementation
-
-### 🏷️ Status Labels
-
-- \`new\` → \`under review\` → \`approved\` / \`not feasible\`
-- Track progress via [Project Board](https://github.com/${context.repo.owner}/${context.repo.repo}/projects)
-
-### 💡 How You Can Help
-
-- Provide additional context if requested
-- Help validate the hypothesis with data
-- Contribute to implementation if you're able
-- Share feedback from your experience
-
-Thank you for contributing to improving the Devviaai framework! 🚀`;
+            const comment = "## 🎉 Thank you for submitting your idea!\n\n" +
+              "This idea has been added to the **Idea Pool** and will be reviewed by the team.\n\n" +
+              "### 📋 Next Steps\n\n" +
+              "1. **Community Discussion** (Optional): Feel free to share this in [Discussions](https://github.com/" + context.repo.owner + "/" + context.repo.repo + "/discussions) for community feedback\n" +
+              "2. **Team Review**: The team will review this idea and update the label to `under review` when evaluation begins\n" +
+              "3. **Validation**: If validated, the idea will move to `approved` status and may be added to a milestone\n" +
+              "4. **Implementation**: Approved ideas will be prioritized and may be assigned for implementation\n\n" +
+              "### 🏷️ Status Labels\n\n" +
+              "- `new` → `under review` → `approved` / `not feasible`\n" +
+              "- Track progress via [Project Board](https://github.com/" + context.repo.owner + "/" + context.repo.repo + "/projects)\n\n" +
+              "### 💡 How You Can Help\n\n" +
+              "- Provide additional context if requested\n" +
+              "- Help validate the hypothesis with data\n" +
+              "- Contribute to implementation if you're able\n" +
+              "- Share feedback from your experience\n\n" +
+              "Thank you for contributing to improving the Devviaai framework! 🚀";
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -94,32 +86,23 @@ Thank you for contributing to improving the Devviaai framework! 🚀`;
                                   context.payload.label.name === 'under review';
             
             if (wasJustLabeled) {
-              const comment = `## 🔍 Idea Under Review
-
-This idea is now under review by the team.
-
-### Review Process
-
-The team will evaluate this idea based on:
-
-1. **Alignment**: Does it align with framework principles?
-2. **Value**: What value does it provide to users?
-3. **Feasibility**: Can it be implemented with reasonable effort?
-4. **Impact**: What is the expected impact?
-5. **Resources**: What resources are required?
-
-### Timeline
-
-- **Initial Review**: 1-2 weeks
-- **Decision**: The issue will be labeled as \`approved\` or \`not feasible\`
-- **Planning**: Approved ideas will be added to a milestone and project board
-
-### Feedback Welcome
-
-Please feel free to add additional context or respond to questions from reviewers.
-
----
-*This is an automated message. A team member will engage with this issue soon.*`;
+              const comment = "## 🔍 Idea Under Review\n\n" +
+                "This idea is now under review by the team.\n\n" +
+                "### Review Process\n\n" +
+                "The team will evaluate this idea based on:\n\n" +
+                "1. **Alignment**: Does it align with framework principles?\n" +
+                "2. **Value**: What value does it provide to users?\n" +
+                "3. **Feasibility**: Can it be implemented with reasonable effort?\n" +
+                "4. **Impact**: What is the expected impact?\n" +
+                "5. **Resources**: What resources are required?\n\n" +
+                "### Timeline\n\n" +
+                "- **Initial Review**: 1-2 weeks\n" +
+                "- **Decision**: The issue will be labeled as `approved` or `not feasible`\n" +
+                "- **Planning**: Approved ideas will be added to a milestone and project board\n\n" +
+                "### Feedback Welcome\n\n" +
+                "Please feel free to add additional context or respond to questions from reviewers.\n\n" +
+                "---\n" +
+                "*This is an automated message. A team member will engage with this issue soon.*";
 
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
@@ -143,35 +126,27 @@ Please feel free to add additional context or respond to questions from reviewer
                                   context.payload.label.name === 'approved';
             
             if (wasJustLabeled) {
-              const comment = `## ✅ Idea Approved!
-
-Congratulations! This idea has been approved for implementation.
-
-### 🎯 Next Steps
-
-1. **Prioritization**: This will be prioritized against other approved ideas
-2. **Milestone**: Will be assigned to an upcoming milestone/release
-3. **Project Board**: Will be added to the project board for tracking
-4. **Implementation**: 
-   - Assigned to a team member or open for contributors
-   - A linked PR will track implementation progress
-   - Updates will be posted here
-
-### 📊 Tracking
-
-You can track progress via:
-- This issue (status updates will be posted)
-- [Project Board](https://github.com/${context.repo.owner}/${context.repo.repo}/projects)
-- Related milestone
-
-### 🤝 Contributing
-
-If you'd like to contribute to the implementation:
-1. Comment on this issue expressing interest
-2. Wait for assignment or guidance from maintainers
-3. Follow the PR template when submitting code
-
-Thank you for this valuable contribution to the framework! 🎉`;
+              const comment = "## ✅ Idea Approved!\n\n" +
+                "Congratulations! This idea has been approved for implementation.\n\n" +
+                "### 🎯 Next Steps\n\n" +
+                "1. **Prioritization**: This will be prioritized against other approved ideas\n" +
+                "2. **Milestone**: Will be assigned to an upcoming milestone/release\n" +
+                "3. **Project Board**: Will be added to the project board for tracking\n" +
+                "4. **Implementation**:\n" +
+                "   - Assigned to a team member or open for contributors\n" +
+                "   - A linked PR will track implementation progress\n" +
+                "   - Updates will be posted here\n\n" +
+                "### 📊 Tracking\n\n" +
+                "You can track progress via:\n" +
+                "- This issue (status updates will be posted)\n" +
+                "- [Project Board](https://github.com/" + context.repo.owner + "/" + context.repo.repo + "/projects)\n" +
+                "- Related milestone\n\n" +
+                "### 🤝 Contributing\n\n" +
+                "If you'd like to contribute to the implementation:\n" +
+                "1. Comment on this issue expressing interest\n" +
+                "2. Wait for assignment or guidance from maintainers\n" +
+                "3. Follow the PR template when submitting code\n\n" +
+                "Thank you for this valuable contribution to the framework! 🎉";
 
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
@@ -195,33 +170,25 @@ Thank you for this valuable contribution to the framework! 🎉`;
                                   context.payload.label.name === 'not feasible';
             
             if (wasJustLabeled) {
-              const comment = `## ℹ️ Idea Not Feasible
-
-After review, this idea has been determined to be not feasible at this time.
-
-A team member will provide detailed reasoning for this decision. Common reasons include:
-
-- Does not align with framework principles or goals
-- Technical constraints or limitations
-- Resource constraints
-- Overlaps with existing functionality
-- Timing or prioritization concerns
-
-### 💭 What This Means
-
-- This issue will be closed
-- The idea is documented for future reference
-- Lessons learned will be captured
-- You're encouraged to refine and resubmit if circumstances change
-
-### 🔄 If You Disagree
-
-If you believe this decision should be reconsidered:
-1. Provide additional context or evidence
-2. Address the concerns raised by reviewers
-3. Request a re-review from maintainers
-
-Thank you for your contribution and understanding! Your participation helps improve the framework. 🙏`;
+              const comment = "## ℹ️ Idea Not Feasible\n\n" +
+                "After review, this idea has been determined to be not feasible at this time.\n\n" +
+                "A team member will provide detailed reasoning for this decision. Common reasons include:\n\n" +
+                "- Does not align with framework principles or goals\n" +
+                "- Technical constraints or limitations\n" +
+                "- Resource constraints\n" +
+                "- Overlaps with existing functionality\n" +
+                "- Timing or prioritization concerns\n\n" +
+                "### 💭 What This Means\n\n" +
+                "- This issue will be closed\n" +
+                "- The idea is documented for future reference\n" +
+                "- Lessons learned will be captured\n" +
+                "- You're encouraged to refine and resubmit if circumstances change\n\n" +
+                "### 🔄 If You Disagree\n\n" +
+                "If you believe this decision should be reconsidered:\n" +
+                "1. Provide additional context or evidence\n" +
+                "2. Address the concerns raised by reviewers\n" +
+                "3. Request a re-review from maintainers\n\n" +
+                "Thank you for your contribution and understanding! Your participation helps improve the framework. 🙏";
 
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
