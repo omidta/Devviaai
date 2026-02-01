@@ -9,6 +9,7 @@ Welcome to the complete documentation for the Devviaai Unified Workflow Framewor
 - **[Quick Start Guide](guides/QUICK-START.md)** - Get up and running in 15 minutes
 - **[Step-by-Step Guide](guides/STEP-BY-STEP.md)** - Comprehensive walkthrough of the framework
 - **[Customization Guide](guides/CUSTOMIZATION.md)** - Adapt the framework to your project needs
+- **[Innovation Workflow Guide](guides/INNOVATION-WORKFLOW.md)** - Manage ideas and innovation using Design Thinking, Lean Startup, or Agile
 
 ### Framework Overview
 

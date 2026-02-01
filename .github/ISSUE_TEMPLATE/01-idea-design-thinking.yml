@@ -1,0 +1,202 @@
+name: 💡 New Idea - Design Thinking Framework
+description: Submit a new idea using the Design Thinking approach (Empathize → Define → Ideate → Prototype → Test)
+title: "[IDEA] "
+labels: ["idea", "new", "design-thinking"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Design Thinking Idea Submission
+        
+        Use this template to submit ideas following the Design Thinking framework.
+        This structured approach helps ensure ideas are user-centered and well-thought-out.
+        
+        **Framework Stages**: Empathize → Define → Ideate → Prototype → Test
+        
+  - type: input
+    id: title
+    attributes:
+      label: Idea Title
+      description: A concise, descriptive title for your idea
+      placeholder: "e.g., Automated TBD Validation Tool"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of idea is this?
+      options:
+        - Enhancement
+        - New Feature
+        - Framework Improvement
+        - Documentation
+        - Tooling
+        - Process Improvement
+        - Research
+    validations:
+      required: true
+
+  - type: textarea
+    id: empathize
+    attributes:
+      label: 1️⃣ Empathize - User Needs & Pain Points
+      description: What user needs or pain points does this idea address? Who are the users?
+      placeholder: |
+        - Target Users: Developers using Stage 1 prompts
+        - Pain Points: Manual validation of TBD documents is time-consuming
+        - Current Experience: Users must manually check all TBD sections
+        - User Feedback: "I spend hours validating TBD completeness"
+    validations:
+      required: true
+
+  - type: textarea
+    id: define
+    attributes:
+      label: 2️⃣ Define - Problem Statement
+      description: Clearly define the problem you're solving
+      placeholder: |
+        Problem Statement: Developers need a faster, more reliable way to validate TBD documents 
+        to ensure compliance with the framework before proceeding to Stage 2.
+        
+        Success Criteria:
+        - Validation time reduced by 80%
+        - Zero false negatives on missing required sections
+        - Clear, actionable feedback on issues
+    validations:
+      required: true
+
+  - type: textarea
+    id: ideate
+    attributes:
+      label: 3️⃣ Ideate - Proposed Solution
+      description: Describe your proposed solution
+      placeholder: |
+        Create an automated CLI tool that:
+        1. Parses TBD markdown documents
+        2. Validates all required sections exist
+        3. Checks for proper ID formatting (FR-XXX, COMP-XXX, etc.)
+        4. Generates a validation report
+        
+        Alternative approaches considered:
+        - Web-based validator
+        - GitHub Action integration
+    validations:
+      required: true
+
+  - type: textarea
+    id: prototype
+    attributes:
+      label: 4️⃣ Prototype - Implementation Approach
+      description: How would you prototype or implement this?
+      placeholder: |
+        Phase 1 - MVP:
+        - Python script using markdown parser
+        - JSON schema for TBD validation rules
+        - Command-line interface
+        
+        Phase 2 - Enhancement:
+        - GitHub Action integration
+        - Visual Studio Code extension
+        - Real-time validation feedback
+    validations:
+      required: false
+
+  - type: textarea
+    id: test
+    attributes:
+      label: 5️⃣ Test - Validation & Metrics
+      description: How will we validate this idea works? What metrics will measure success?
+      placeholder: |
+        Validation Plan:
+        - Test with 10 existing TBD documents
+        - User acceptance testing with 5 framework users
+        - Performance benchmarking
+        
+        Success Metrics:
+        - Time to validate TBD: < 30 seconds (vs 30 minutes manual)
+        - Accuracy: 100% detection of missing sections
+        - User satisfaction score: > 4/5
+        - Adoption rate: > 50% of active users within 3 months
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: What priority do you suggest for this idea?
+      options:
+        - Critical - Blocking current work
+        - High - Significantly improves workflow
+        - Medium - Nice to have improvement
+        - Low - Future consideration
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated Effort
+      description: Rough estimate of implementation effort
+      options:
+        - Small (< 1 week)
+        - Medium (1-4 weeks)
+        - Large (1-3 months)
+        - Extra Large (> 3 months)
+        - Unknown
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: Quantify the expected impact
+      placeholder: |
+        - Time savings: 30 minutes per TBD validation
+        - Affected users: All Stage 1 users (~100 developers)
+        - Total time savings: 50 hours/month across team
+        - Quality improvement: Reduces errors by 90%
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies & Prerequisites
+      description: What dependencies or prerequisites exist?
+      placeholder: |
+        - Requires Python 3.8+
+        - Depends on markdown parser library
+        - No blocking dependencies on other features
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional context, screenshots, or references
+      placeholder: |
+        - Link to similar tools for reference
+        - Screenshots of current pain points
+        - Related discussions or issues
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: This idea aligns with the Devviaai framework principles
+          required: true
+        - label: I am willing to contribute to implementation (if applicable)
+          required: false

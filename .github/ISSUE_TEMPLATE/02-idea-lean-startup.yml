@@ -1,0 +1,223 @@
+name: 🚀 New Idea - Lean Startup Framework
+description: Submit a new idea using the Lean Startup approach (Build → Measure → Learn)
+title: "[IDEA] "
+labels: ["idea", "new", "lean-startup"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Lean Startup Idea Submission
+        
+        Use this template to submit ideas following the Lean Startup methodology.
+        Focus on rapid experimentation, validated learning, and iteration.
+        
+        **Framework Cycle**: Build → Measure → Learn
+        
+  - type: input
+    id: title
+    attributes:
+      label: Idea Title
+      description: A concise, descriptive title for your idea
+      placeholder: "e.g., AI-Powered Architecture Recommendation Engine"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of idea is this?
+      options:
+        - Enhancement
+        - New Feature
+        - Framework Improvement
+        - Documentation
+        - Tooling
+        - Process Improvement
+        - Research
+    validations:
+      required: true
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 💭 Hypothesis
+      description: What is your hypothesis? What problem are you trying to solve?
+      placeholder: |
+        Hypothesis: If we provide AI-powered architecture recommendations during Stage 1, 
+        then architects will produce higher-quality TBDs 30% faster.
+        
+        Assumption to test:
+        - Architects spend significant time researching architecture patterns
+        - AI can accurately suggest relevant Azure patterns
+        - Time savings will justify the implementation cost
+    validations:
+      required: true
+
+  - type: textarea
+    id: build
+    attributes:
+      label: 🔨 Build - Minimum Viable Product (MVP)
+      description: Describe the smallest version that can test your hypothesis
+      placeholder: |
+        MVP Scope:
+        - Integration with OpenAI API for architecture suggestions
+        - Support for 5 common architecture patterns
+        - Simple command-line interface
+        - Analysis of requirements to suggest patterns
+        
+        Out of Scope for MVP:
+        - Visual diagram generation
+        - Multi-cloud support
+        - Web interface
+        
+        Implementation Plan:
+        1. Create prompt template for architecture analysis
+        2. Integrate OpenAI API client
+        3. Parse requirements from input
+        4. Generate recommendations
+        5. Output structured suggestions
+    validations:
+      required: true
+
+  - type: textarea
+    id: measure
+    attributes:
+      label: 📊 Measure - Key Metrics
+      description: What metrics will you track to validate the hypothesis?
+      placeholder: |
+        Primary Metrics:
+        - Time to complete TBD: Baseline 8 hours → Target 5.6 hours (30% reduction)
+        - TBD quality score: Baseline 7/10 → Target 8.5/10
+        - Recommendation accuracy: Target > 80%
+        
+        Secondary Metrics:
+        - User adoption rate: Target > 60% in first month
+        - Number of recommendations used: Track acceptance rate
+        - User satisfaction: Target NPS > 40
+        
+        Data Collection Method:
+        - Built-in usage analytics
+        - Before/after time tracking
+        - User surveys
+        - Quality assessment by peer review
+    validations:
+      required: true
+
+  - type: textarea
+    id: learn
+    attributes:
+      label: 🧠 Learn - Success Criteria & Pivot Plan
+      description: How will you determine if the hypothesis is validated? What's your pivot plan?
+      placeholder: |
+        Success Criteria:
+        - ✅ Validated: If 2 of 3 primary metrics meet targets after 4 weeks
+        - ❌ Invalidated: If < 1 primary metric meets targets
+        - 🔄 Needs iteration: If mixed results
+        
+        Pivot Options if hypothesis fails:
+        1. Persevere: Continue with minor adjustments
+        2. Pivot - Customer Segment: Focus on junior architects instead
+        3. Pivot - Problem: Address a different pain point in Stage 1
+        4. Pivot - Solution: Try template-based recommendations instead of AI
+        5. Abort: If fundamentally flawed, document learnings and move on
+        
+        Learning Plan:
+        - Week 1-2: Release MVP to 5 beta users
+        - Week 3: Collect feedback and metrics
+        - Week 4: Analyze data and decide direction
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: ⚠️ Risks & Assumptions
+      description: What are the key risks and assumptions?
+      placeholder: |
+        Key Assumptions:
+        1. Architects will trust AI recommendations
+        2. OpenAI API will provide relevant suggestions
+        3. Cost of API usage is acceptable
+        
+        Risks:
+        - API reliability/availability
+        - Recommendation quality issues
+        - User resistance to AI tools
+        - API costs exceed budget
+        
+        Mitigation Strategies:
+        - Start with small user group
+        - Set API rate limits and budgets
+        - Provide transparency on AI limitations
+        - Include human review process
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: What priority do you suggest for this experiment?
+      options:
+        - Critical - Blocking current work
+        - High - High-value experiment
+        - Medium - Worthwhile to test
+        - Low - Nice to have
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: MVP Effort Estimate
+      description: Estimated effort to build and test MVP
+      options:
+        - Small (< 1 week)
+        - Medium (1-2 weeks)
+        - Large (3-4 weeks)
+        - Too Large (needs breakdown)
+    validations:
+      required: false
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources Required
+      description: What resources are needed for this experiment?
+      placeholder: |
+        - Development time: 1 week
+        - OpenAI API credits: $100/month
+        - Test users: 5 volunteers
+        - Domain expert time: 2 hours for review
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any additional context, research, or references
+      placeholder: |
+        - Link to research on AI in architecture
+        - Competitor analysis
+        - User interview findings
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: This idea aligns with the Devviaai framework principles
+          required: true
+        - label: The MVP is small enough to validate the hypothesis quickly
+          required: true
+        - label: I am willing to help implement and measure results (if applicable)
+          required: false
